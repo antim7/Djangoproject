@@ -1,0 +1,57 @@
+{% extends 'master.html' %}
+{% block body %}
+
+<section id="cart_items">
+		<div class="container">
+			<div class="breadcrumbs">
+				<ol class="breadcrumb">
+				  <li><a href="#">Home</a></li>
+				  <li class="active">MY Profile</li>
+				</ol>
+			</div>
+			<div class="table-responsive cart_info">
+				<table class="table table-condensed">
+					<thead>
+						<tr class="cart_menu">
+                         <td class="description"> </td><td class="description">  </td>
+							<td class="description">User Name</td>
+							<td class="description">First Name</td>
+							<td class="description">Last Name</td>
+							<td class="description">Email ID</td>
+                            <td class="description">Update Password</td>
+
+						</tr>
+					</thead>
+					<tbody>
+
+						<tr>
+							<td></td><td></td>
+							<td >
+								<h4><a href="">{{user.username}}</a></h4>
+							</td>
+							<td >
+								<h4><a href="">{{user.first_name}}</a></h4>
+							</td>
+							<td >
+								<h4><a href="">{{user.last_name}}</a></h4>
+							</td>
+							<td >
+								<h4><a href="">{{user.email}}</a></h4>
+
+							</td>
+
+							<td >
+								<button style="background: #FE980F;"><a href="{% url 'password_reset' %}">Update Password</a></button>
+
+							</td>
+						</tr>
+
+
+					</tbody>
+				</table>
+
+			</div>
+		</div>
+	</section> <!--/#cart_items-->
+
+{% endblock %}
